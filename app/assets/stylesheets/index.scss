@@ -65,6 +65,7 @@ body {
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
+    text-shadow: 4px 4px black;
 }
 
 .masthead-nav > li {
@@ -162,6 +163,10 @@ body {
   }
 }
 
-.lead {
-  align-content: left;
+.frontpagemainclass {
+  background-image: url("http://bit.ly/1Xfzsdg");
+  /*width: 660px;
+  height: 370px;*/
+  background-size: cover;
+  text-shadow: 2px 2px black;
 }
