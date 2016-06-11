@@ -1,5 +1,64 @@
-<h1>Surveys</h1>
 
-<% @surveys.each do |survey| %>
-    <p><%= link_to survey.title, survey_path(survey.id)%></p>
-<% end %>
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h1 class="masthead-brand">Crowdsource Fashion</h1>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+<!--              <li><a href="#">Features</a></li>-->
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <hr>
+            <br>
+            <h1>Welcome<br> </h1>
+            <h1>to the Crowdsource Fashion survey</h1>
+            <h1>Surveys</h1>
+
+            <% @surveys.each do |survey| %>
+                <p><%= link_to survey.title, survey_path(survey.id)%></p>
+            <% end %>
+
+            <p class="lead">
+              By doing our survey you :<br>
+              <br>
+              Receive a guaranteed discount code<br>
+              Have a chance of winning one of our brand new "First Edition" bags!</p>
+            <p class="lead">
+              <br>
+              <br>
+              <a href="#" class="btn btn-lg btn-default">Start the survey!</a>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <hr>
+              <p>Copyright 2016</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
