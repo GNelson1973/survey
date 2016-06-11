@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160611081615) do
+ActiveRecord::Schema.define(version: 20160611125648) do
 
   create_table "answers", force: :cascade do |t|
     t.string   "title"
@@ -34,6 +34,12 @@ ActiveRecord::Schema.define(version: 20160611081615) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "ans_1"
+    t.boolean  "ans_2"
+    t.boolean  "ans_3"
+    t.boolean  "ans_4"
+    t.boolean  "ans_5"
+    t.boolean  "ans_6"
   end
 
   add_index "responses", ["user_id"], name: "index_responses_on_user_id"

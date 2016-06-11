@@ -1,11 +1,17 @@
 <h1><%= @survey.title %></h1>
 
-<%= @survey.questions[0].title%>
 
-<%= form_for @survey do |f| %>
-  <% @survey.questions[0].answers.each do |answer| %>
+<%= form_for @responses do |f| %>
+<% @survey.questions.each do |q| %>
+<h2><%= q.title %></h2>
+  <% q.answers.each do |answer| %>
   <br>
   <br>
-  <button type="submit" value="<%=answer%>"> <%= answer.title.capitalize %>  </button>
+  <%= radio_button_tag("question[#{q.id}]", answer.title ) %>
+    <%= label_tag(:title, answer.title) %>
   <% end %>
+  <br><br>
+  <% end %>
+  <br><br>
+  <%= f.submit %>
 <% end %>

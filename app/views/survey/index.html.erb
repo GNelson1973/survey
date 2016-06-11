@@ -1,11 +1,13 @@
-<h1>The Crowdsource Fashion survey</h1>
+<h1>The Crowdsource Fashion Surveys</h1>
 <p class="lead">
-    By doing our survey you:<br>
+    By doing a survey you:<br>
     <br>
     Receive a guaranteed discount code<br>
     Have a chance of winning one of our brand new "First Edition" bags!</p>
     <p class="lead">
 <br>
 <br>
-<a href="#" class="btn btn-lg btn-default">Start the survey!</a>
+<% @surveys.each do |survey| %>
+    <p><%= link_to survey.title, survey_path(survey.id)  %></p>
+<% end %>
 </p>
