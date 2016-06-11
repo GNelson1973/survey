@@ -1,5 +1,13 @@
 class SurveyController < ApplicationController
-  # has_many :questions
+
   def home
+  end
+
+  def index
+    @surveys = Survey.all
+  end
+
+  def show
+    @survey = Survey.find(params[:id])
   end
 end
