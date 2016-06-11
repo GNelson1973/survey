@@ -1,3 +1,4 @@
+
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -22,6 +23,12 @@
             <br>
             <h1>Welcome<br> </h1>
             <h1>to the Crowdsource Fashion survey</h1>
+            <h1>Surveys</h1>
+
+            <% @surveys.each do |survey| %>
+                <p><%= link_to survey.title, survey_path(survey.id)%></p>
+            <% end %>
+
             <p class="lead">
               By doing our survey you :<br>
               <br>

@@ -1,0 +1,11 @@
+<h1><%= @survey.title %></h1>
+
+<%= @survey.questions[0].title%>
+
+<%= form_for @survey do |f| %>
+  <% @survey.questions[0].answers.each do |answer| %>
+  <br>
+  <br>
+  <button type="submit" value="<%=answer%>"> <%= answer.title.capitalize %>  </button>
+  <% end %>
+<% end %>
