@@ -8,6 +8,6 @@
 <br>
 <br>
 <% @surveys.each do |survey| %>
-    <p><%= link_to survey.title, survey_path(survey.id)  %></p>
+    <a><%= link_to survey.title, survey_path(survey.id) %></a>
 <% end %>
 </p>
